@@ -1,0 +1,5 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 104861696 bytes for committing reserved memory.
+# An error report file with more information is saved as:
+# /tmp/hadoop-parallels/nm-local-dir/usercache/parallels/appcache/application_1449350578721_0001/container_1449350578721_0001_01_000005/hs_err_pid24167.log

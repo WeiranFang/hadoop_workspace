@@ -1,0 +1,38 @@
+2015-12-11 23:32:54,504 INFO [main] org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from hadoop-metrics2.properties
+2015-12-11 23:32:54,724 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2015-12-11 23:32:54,724 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system started
+2015-12-11 23:32:54,757 INFO [main] org.apache.hadoop.mapred.YarnChild: Executing with tokens:
+2015-12-11 23:32:54,757 INFO [main] org.apache.hadoop.mapred.YarnChild: Kind: mapreduce.job, Service: job_1449846414359_0009, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@2cd6bd1e)
+2015-12-11 23:32:55,044 INFO [main] org.apache.hadoop.mapred.YarnChild: Sleeping for 0ms before retrying again. Got null now.
+2015-12-11 23:32:55,696 INFO [main] org.apache.hadoop.mapred.YarnChild: mapreduce.cluster.local.dir for child: /home/parallels/hadoop/tmp/nm-local-dir/usercache/parallels/appcache/application_1449846414359_0009
+2015-12-11 23:32:56,847 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+2015-12-11 23:32:58,208 INFO [main] org.apache.hadoop.mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2015-12-11 23:32:58,812 INFO [main] org.apache.hadoop.mapred.MapTask: Processing split: hdfs://localhost:9000/user/parallels/chessdata/input/ficsgamesdb_small_201502.pgn:0+6065547
+2015-12-11 23:32:59,138 INFO [main] org.apache.hadoop.mapred.MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+2015-12-11 23:32:59,138 INFO [main] org.apache.hadoop.mapred.MapTask: mapreduce.task.io.sort.mb: 100
+2015-12-11 23:32:59,138 INFO [main] org.apache.hadoop.mapred.MapTask: soft limit at 83886080
+2015-12-11 23:32:59,138 INFO [main] org.apache.hadoop.mapred.MapTask: bufstart = 0; bufvoid = 104857600
+2015-12-11 23:32:59,138 INFO [main] org.apache.hadoop.mapred.MapTask: kvstart = 26214396; length = 6553600
+2015-12-11 23:32:59,209 INFO [main] org.apache.hadoop.mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2015-12-11 23:32:59,436 INFO [main] org.apache.hadoop.mapred.MapTask: Starting flush of map output
+2015-12-11 23:32:59,488 WARN [main] org.apache.hadoop.mapred.YarnChild: Exception running child : java.io.IOException: Type mismatch in value from map: expected org.apache.hadoop.io.IntWritable, received org.apache.hadoop.io.ArrayWritable
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.collect(MapTask.java:1074)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.write(MapTask.java:712)
+	at org.apache.hadoop.mapreduce.task.TaskInputOutputContextImpl.write(TaskInputOutputContextImpl.java:89)
+	at org.apache.hadoop.mapreduce.lib.map.WrappedMapper$Context.write(WrappedMapper.java:112)
+	at ChessDataA$TokenizerMapper.map(ChessDataA.java:47)
+	at ChessDataA$TokenizerMapper.map(ChessDataA.java:18)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:145)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:784)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:163)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1628)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:158)
+
+2015-12-11 23:32:59,523 INFO [main] org.apache.hadoop.mapred.Task: Runnning cleanup for the task
+2015-12-11 23:32:59,569 WARN [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: Could not delete hdfs://localhost:9000/user/parallels/chessdata/output_a/_temporary/1/_temporary/attempt_1449846414359_0009_m_000002_2
+2015-12-11 23:32:59,766 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Stopping MapTask metrics system...
+2015-12-11 23:32:59,767 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system stopped.
+2015-12-11 23:32:59,767 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system shutdown complete.

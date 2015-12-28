@@ -1,0 +1,4 @@
+2015-12-11 23:35:06,953 INFO [main] org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from hadoop-metrics2.properties
+2015-12-11 23:35:07,347 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2015-12-11 23:35:07,348 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system started
+2015-12-11 23:35:07,412 INFO [main] org.apache.hadoop.mapred.YarnChild: Executing with tokens:

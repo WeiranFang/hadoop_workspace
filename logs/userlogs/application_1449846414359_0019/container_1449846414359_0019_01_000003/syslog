@@ -1,0 +1,10 @@
+2015-12-12 00:41:59,416 INFO [main] org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from hadoop-metrics2.properties
+2015-12-12 00:41:59,616 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2015-12-12 00:41:59,616 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system started
+2015-12-12 00:41:59,645 INFO [main] org.apache.hadoop.mapred.YarnChild: Executing with tokens:
+2015-12-12 00:41:59,645 INFO [main] org.apache.hadoop.mapred.YarnChild: Kind: mapreduce.job, Service: job_1449846414359_0019, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@4709eb46)
+2015-12-12 00:41:59,959 INFO [main] org.apache.hadoop.mapred.YarnChild: Sleeping for 0ms before retrying again. Got null now.
+2015-12-12 00:42:00,882 INFO [main] org.apache.hadoop.mapred.YarnChild: mapreduce.cluster.local.dir for child: /home/parallels/hadoop/tmp/nm-local-dir/usercache/parallels/appcache/application_1449846414359_0019
+2015-12-12 00:42:02,534 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+2015-12-12 00:42:03,674 INFO [main] org.apache.hadoop.mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2015-12-12 00:42:04,152 INFO [main] org.apache.hadoop.mapred.MapTask: Processing split: hdfs://localhost:9000/user/parallels/chessdata/input/ficsgamesdb_small_201501.pgn:0+7560294

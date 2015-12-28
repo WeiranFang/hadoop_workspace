@@ -1,0 +1,73 @@
+2015-12-10 21:57:22,865 INFO [main] org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from hadoop-metrics2.properties
+2015-12-10 21:57:23,087 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2015-12-10 21:57:23,087 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system started
+2015-12-10 21:57:23,160 INFO [main] org.apache.hadoop.mapred.YarnChild: Executing with tokens:
+2015-12-10 21:57:23,160 INFO [main] org.apache.hadoop.mapred.YarnChild: Kind: mapreduce.job, Service: job_1449802555556_0001, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@4709eb46)
+2015-12-10 21:57:23,434 INFO [main] org.apache.hadoop.mapred.YarnChild: Sleeping for 0ms before retrying again. Got null now.
+2015-12-10 21:57:23,975 INFO [main] org.apache.hadoop.mapred.YarnChild: mapreduce.cluster.local.dir for child: /home/parallels/hadoop/tmp/nm-local-dir/usercache/parallels/appcache/application_1449802555556_0001
+2015-12-10 21:57:25,409 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+2015-12-10 21:57:28,002 INFO [main] org.apache.hadoop.mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2015-12-10 21:57:30,528 INFO [main] org.apache.hadoop.mapred.MapTask: Processing split: hdfs://localhost:9000/user/parallels/chessdata/input/ficsgamesdb_small_201501.pgn:0+7560294
+2015-12-10 21:57:30,715 INFO [main] org.apache.hadoop.mapred.MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+2015-12-10 21:57:30,715 INFO [main] org.apache.hadoop.mapred.MapTask: mapreduce.task.io.sort.mb: 100
+2015-12-10 21:57:30,715 INFO [main] org.apache.hadoop.mapred.MapTask: soft limit at 83886080
+2015-12-10 21:57:30,715 INFO [main] org.apache.hadoop.mapred.MapTask: bufstart = 0; bufvoid = 104857600
+2015-12-10 21:57:30,715 INFO [main] org.apache.hadoop.mapred.MapTask: kvstart = 26214396; length = 6553600
+2015-12-10 21:57:30,729 INFO [main] org.apache.hadoop.mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2015-12-10 21:57:31,715 INFO [main] org.apache.hadoop.mapred.MapTask: Starting flush of map output
+2015-12-10 21:57:31,715 INFO [main] org.apache.hadoop.mapred.MapTask: Spilling map output
+2015-12-10 21:57:31,715 INFO [main] org.apache.hadoop.mapred.MapTask: bufstart = 0; bufend = 87460; bufvoid = 104857600
+2015-12-10 21:57:31,715 INFO [main] org.apache.hadoop.mapred.MapTask: kvstart = 26214396(104857584); kvend = 26178844(104715376); length = 35553/6553600
+2015-12-10 21:57:31,809 INFO [main] org.apache.hadoop.mapred.MapTask: Starting flush of map output
+2015-12-10 21:57:31,809 INFO [main] org.apache.hadoop.mapred.MapTask: (RESET) equator 0 kv 26214396(104857584) kvi 26178840(104715360)
+2015-12-10 21:57:31,809 INFO [main] org.apache.hadoop.mapred.MapTask: Spilling map output
+2015-12-10 21:57:31,809 INFO [main] org.apache.hadoop.mapred.MapTask: bufstart = 0; bufend = 87460; bufvoid = 104857600
+2015-12-10 21:57:31,810 INFO [main] org.apache.hadoop.mapred.MapTask: kvstart = 26214396(104857584); kvend = 26178844(104715376); length = 35553/6553600
+2015-12-10 21:57:31,835 INFO [main] org.apache.hadoop.mapred.MapTask: Ignoring exception during close for org.apache.hadoop.mapred.MapTask$NewOutputCollector@6d1557ff
+java.io.IOException: wrong value class: class org.apache.hadoop.io.Text is not class org.apache.hadoop.io.IntWritable
+	at org.apache.hadoop.mapred.IFile$Writer.append(IFile.java:194)
+	at org.apache.hadoop.mapred.Task$CombineOutputCollector.collect(Task.java:1313)
+	at org.apache.hadoop.mapred.Task$NewCombinerRunner$OutputConverter.write(Task.java:1630)
+	at org.apache.hadoop.mapreduce.task.TaskInputOutputContextImpl.write(TaskInputOutputContextImpl.java:89)
+	at org.apache.hadoop.mapreduce.lib.reduce.WrappedReducer$Context.write(WrappedReducer.java:105)
+	at ChessDataA$SumReducer.reduce(ChessDataA.java:63)
+	at ChessDataA$SumReducer.reduce(ChessDataA.java:48)
+	at org.apache.hadoop.mapreduce.Reducer.run(Reducer.java:171)
+	at org.apache.hadoop.mapred.Task$NewCombinerRunner.combine(Task.java:1651)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.sortAndSpill(MapTask.java:1630)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.flush(MapTask.java:1482)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.close(MapTask.java:720)
+	at org.apache.hadoop.mapred.MapTask.closeQuietly(MapTask.java:2012)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:794)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:163)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1628)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:158)
+2015-12-10 21:57:31,850 WARN [main] org.apache.hadoop.mapred.YarnChild: Exception running child : java.io.IOException: wrong value class: class org.apache.hadoop.io.Text is not class org.apache.hadoop.io.IntWritable
+	at org.apache.hadoop.mapred.IFile$Writer.append(IFile.java:194)
+	at org.apache.hadoop.mapred.Task$CombineOutputCollector.collect(Task.java:1313)
+	at org.apache.hadoop.mapred.Task$NewCombinerRunner$OutputConverter.write(Task.java:1630)
+	at org.apache.hadoop.mapreduce.task.TaskInputOutputContextImpl.write(TaskInputOutputContextImpl.java:89)
+	at org.apache.hadoop.mapreduce.lib.reduce.WrappedReducer$Context.write(WrappedReducer.java:105)
+	at ChessDataA$SumReducer.reduce(ChessDataA.java:63)
+	at ChessDataA$SumReducer.reduce(ChessDataA.java:48)
+	at org.apache.hadoop.mapreduce.Reducer.run(Reducer.java:171)
+	at org.apache.hadoop.mapred.Task$NewCombinerRunner.combine(Task.java:1651)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.sortAndSpill(MapTask.java:1630)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.flush(MapTask.java:1482)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.close(MapTask.java:720)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:790)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:163)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1628)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:158)
+
+2015-12-10 21:57:31,857 INFO [main] org.apache.hadoop.mapred.Task: Runnning cleanup for the task
+2015-12-10 21:57:31,865 WARN [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: Could not delete hdfs://localhost:9000/user/parallels/chessdata/output/_temporary/1/_temporary/attempt_1449802555556_0001_m_000001_1
+2015-12-10 21:57:31,872 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Stopping MapTask metrics system...
+2015-12-10 21:57:31,873 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system stopped.
+2015-12-10 21:57:31,873 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system shutdown complete.

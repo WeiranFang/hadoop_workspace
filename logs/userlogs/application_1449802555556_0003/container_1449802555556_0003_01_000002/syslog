@@ -1,0 +1,16 @@
+2015-12-10 22:50:48,072 INFO [main] org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from hadoop-metrics2.properties
+2015-12-10 22:50:48,299 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2015-12-10 22:50:48,299 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system started
+2015-12-10 22:50:48,327 INFO [main] org.apache.hadoop.mapred.YarnChild: Executing with tokens:
+2015-12-10 22:50:48,327 INFO [main] org.apache.hadoop.mapred.YarnChild: Kind: mapreduce.job, Service: job_1449802555556_0003, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@3b6d749e)
+2015-12-10 22:50:48,596 INFO [main] org.apache.hadoop.mapred.YarnChild: Sleeping for 0ms before retrying again. Got null now.
+2015-12-10 22:50:49,413 INFO [main] org.apache.hadoop.mapred.YarnChild: mapreduce.cluster.local.dir for child: /home/parallels/hadoop/tmp/nm-local-dir/usercache/parallels/appcache/application_1449802555556_0003
+2015-12-10 22:50:50,945 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+2015-12-10 22:50:52,047 INFO [main] org.apache.hadoop.mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2015-12-10 22:50:52,525 INFO [main] org.apache.hadoop.mapred.MapTask: Processing split: hdfs://localhost:9000/user/parallels/chessdata/input/ficsgamesdb_small_201503.pgn:0+8144694
+2015-12-10 22:50:52,915 INFO [main] org.apache.hadoop.mapred.MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+2015-12-10 22:50:52,917 INFO [main] org.apache.hadoop.mapred.MapTask: mapreduce.task.io.sort.mb: 100
+2015-12-10 22:50:52,917 INFO [main] org.apache.hadoop.mapred.MapTask: soft limit at 83886080
+2015-12-10 22:50:52,917 INFO [main] org.apache.hadoop.mapred.MapTask: bufstart = 0; bufvoid = 104857600
+2015-12-10 22:50:52,917 INFO [main] org.apache.hadoop.mapred.MapTask: kvstart = 26214396; length = 6553600
+2015-12-10 22:50:52,971 INFO [main] org.apache.hadoop.mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer

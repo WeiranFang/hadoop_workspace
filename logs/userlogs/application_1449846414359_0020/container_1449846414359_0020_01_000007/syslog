@@ -1,0 +1,26 @@
+2015-12-12 00:45:53,726 INFO [main] org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from hadoop-metrics2.properties
+2015-12-12 00:45:53,887 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2015-12-12 00:45:53,888 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: ReduceTask metrics system started
+2015-12-12 00:45:53,925 INFO [main] org.apache.hadoop.mapred.YarnChild: Executing with tokens:
+2015-12-12 00:45:53,925 INFO [main] org.apache.hadoop.mapred.YarnChild: Kind: mapreduce.job, Service: job_1449846414359_0020, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@4709eb46)
+2015-12-12 00:45:54,158 INFO [main] org.apache.hadoop.mapred.YarnChild: Sleeping for 0ms before retrying again. Got null now.
+2015-12-12 00:45:54,798 INFO [main] org.apache.hadoop.mapred.YarnChild: mapreduce.cluster.local.dir for child: /home/parallels/hadoop/tmp/nm-local-dir/usercache/parallels/appcache/application_1449846414359_0020
+2015-12-12 00:45:56,382 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+2015-12-12 00:45:57,559 INFO [main] org.apache.hadoop.mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2015-12-12 00:45:57,712 INFO [main] org.apache.hadoop.mapred.ReduceTask: Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@730d3c3b
+2015-12-12 00:45:57,796 INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: MergerManager: memoryLimit=141937872, maxSingleShuffleLimit=35484468, mergeThreshold=93679000, ioSortFactor=10, memToMemMergeOutputsThreshold=10
+2015-12-12 00:45:57,805 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.EventFetcher: attempt_1449846414359_0020_r_000000_0 Thread started: EventFetcher for fetching Map Completion Events
+2015-12-12 00:45:57,829 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Ignoring obsolete output of FAILED map-task: 'attempt_1449846414359_0020_m_000000_0'
+2015-12-12 00:45:57,829 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Ignoring obsolete output of FAILED map-task: 'attempt_1449846414359_0020_m_000002_0'
+2015-12-12 00:45:57,829 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.EventFetcher: attempt_1449846414359_0020_r_000000_0: Got 1 new map-outputs
+2015-12-12 00:45:57,830 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Assigning ubuntu:13562 with 1 to fetcher#1
+2015-12-12 00:45:57,843 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: assigned 1 of 1 to ubuntu:13562 to fetcher#1
+2015-12-12 00:45:59,466 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.Fetcher: for url=13562/mapOutput?job=job_1449846414359_0020&reduce=0&map=attempt_1449846414359_0020_m_000001_0 sent hash and received reply
+2015-12-12 00:45:59,487 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.Fetcher: fetcher#1 about to shuffle output of map attempt_1449846414359_0020_m_000001_0 decomp: 213338 len: 213342 to MEMORY
+2015-12-12 00:45:59,497 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.InMemoryMapOutput: Read 213338 bytes from map-output for attempt_1449846414359_0020_m_000001_0
+2015-12-12 00:45:59,513 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: closeInMemoryFile -> map-output of size: 213338, inMemoryMapOutputs.size() -> 1, commitMemory -> 0, usedMemory ->213338
+2015-12-12 00:45:59,516 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: ubuntu:13562 freed by fetcher#1 in 1674ms
+2015-12-12 00:46:00,209 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Ignoring obsolete output of FAILED map-task: 'attempt_1449846414359_0020_m_000000_1'
+2015-12-12 00:46:00,209 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Ignoring obsolete output of FAILED map-task: 'attempt_1449846414359_0020_m_000002_1'
+2015-12-12 00:46:09,245 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Ignoring obsolete output of FAILED map-task: 'attempt_1449846414359_0020_m_000000_2'
+2015-12-12 00:46:09,245 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Ignoring obsolete output of FAILED map-task: 'attempt_1449846414359_0020_m_000002_2'

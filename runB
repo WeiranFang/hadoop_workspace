@@ -1,0 +1,19 @@
+#!/bin/bash
+# Run MapReduce Job on ChessData Task A
+rm ChessDataB.jar
+hadoop fs -rm -r chessdata/output_b
+
+echo "*****Begin Compiling"
+hadoop com.sun.tools.javac.Main ChessDataB.java
+echo "*****End Compiling"
+
+echo "*****Begin Jar"
+jar cf ChessDataB.jar ChessDataB*.class
+echo "*****End Jar"
+
+echo "*****Begin MapReduce"
+hadoop jar ChessDataB.jar ChessDataB chessdata/input chessdata/output_b
+echo "*****End MapReduce"
+
+echo "*****Print output"
+hadoop fs -cat chessdata/output_b/*

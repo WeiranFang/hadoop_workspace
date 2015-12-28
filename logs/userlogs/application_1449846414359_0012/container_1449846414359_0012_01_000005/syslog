@@ -1,0 +1,81 @@
+2015-12-11 23:53:33,778 INFO [main] org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from hadoop-metrics2.properties
+2015-12-11 23:53:34,102 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2015-12-11 23:53:34,102 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system started
+2015-12-11 23:53:34,130 INFO [main] org.apache.hadoop.mapred.YarnChild: Executing with tokens:
+2015-12-11 23:53:34,130 INFO [main] org.apache.hadoop.mapred.YarnChild: Kind: mapreduce.job, Service: job_1449846414359_0012, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@5b25daf5)
+2015-12-11 23:53:34,417 INFO [main] org.apache.hadoop.mapred.YarnChild: Sleeping for 0ms before retrying again. Got null now.
+2015-12-11 23:53:35,309 INFO [main] org.apache.hadoop.mapred.YarnChild: mapreduce.cluster.local.dir for child: /home/parallels/hadoop/tmp/nm-local-dir/usercache/parallels/appcache/application_1449846414359_0012
+2015-12-11 23:53:36,706 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+2015-12-11 23:53:38,003 INFO [main] org.apache.hadoop.mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2015-12-11 23:53:38,407 INFO [main] org.apache.hadoop.mapred.MapTask: Processing split: hdfs://localhost:9000/user/parallels/chessdata/input/ficsgamesdb_small_201502.pgn:0+6065547
+2015-12-11 23:53:38,947 INFO [main] org.apache.hadoop.mapred.MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+2015-12-11 23:53:38,948 INFO [main] org.apache.hadoop.mapred.MapTask: mapreduce.task.io.sort.mb: 100
+2015-12-11 23:53:38,948 INFO [main] org.apache.hadoop.mapred.MapTask: soft limit at 83886080
+2015-12-11 23:53:38,948 INFO [main] org.apache.hadoop.mapred.MapTask: bufstart = 0; bufvoid = 104857600
+2015-12-11 23:53:38,948 INFO [main] org.apache.hadoop.mapred.MapTask: kvstart = 26214396; length = 6553600
+2015-12-11 23:53:38,970 INFO [main] org.apache.hadoop.mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2015-12-11 23:53:40,346 INFO [main] org.apache.hadoop.mapred.MapTask: Starting flush of map output
+2015-12-11 23:53:40,346 INFO [main] org.apache.hadoop.mapred.MapTask: Spilling map output
+2015-12-11 23:53:40,346 INFO [main] org.apache.hadoop.mapred.MapTask: bufstart = 0; bufend = 157256; bufvoid = 104857600
+2015-12-11 23:53:40,346 INFO [main] org.apache.hadoop.mapred.MapTask: kvstart = 26214396(104857584); kvend = 26185808(104743232); length = 28589/6553600
+2015-12-11 23:53:40,503 INFO [main] org.apache.hadoop.mapred.MapTask: Starting flush of map output
+2015-12-11 23:53:40,504 INFO [main] org.apache.hadoop.mapred.MapTask: (RESET) equator 0 kv 26214396(104857584) kvi 26185804(104743216)
+2015-12-11 23:53:40,504 INFO [main] org.apache.hadoop.mapred.MapTask: Spilling map output
+2015-12-11 23:53:40,504 INFO [main] org.apache.hadoop.mapred.MapTask: bufstart = 0; bufend = 157256; bufvoid = 104857600
+2015-12-11 23:53:40,504 INFO [main] org.apache.hadoop.mapred.MapTask: kvstart = 26214396(104857584); kvend = 26185808(104743232); length = 28589/6553600
+2015-12-11 23:53:40,513 INFO [main] org.apache.hadoop.mapred.MapTask: Ignoring exception during close for org.apache.hadoop.mapred.MapTask$NewOutputCollector@59c9a28a
+java.lang.RuntimeException: java.lang.NoSuchMethodException: org.apache.hadoop.io.ArrayWritable.<init>()
+	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:131)
+	at org.apache.hadoop.io.serializer.WritableSerialization$WritableDeserializer.deserialize(WritableSerialization.java:66)
+	at org.apache.hadoop.io.serializer.WritableSerialization$WritableDeserializer.deserialize(WritableSerialization.java:42)
+	at org.apache.hadoop.mapreduce.task.ReduceContextImpl.nextKeyValue(ReduceContextImpl.java:146)
+	at org.apache.hadoop.mapreduce.task.ReduceContextImpl.nextKey(ReduceContextImpl.java:121)
+	at org.apache.hadoop.mapreduce.lib.reduce.WrappedReducer$Context.nextKey(WrappedReducer.java:302)
+	at org.apache.hadoop.mapreduce.Reducer.run(Reducer.java:170)
+	at org.apache.hadoop.mapred.Task$NewCombinerRunner.combine(Task.java:1651)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.sortAndSpill(MapTask.java:1630)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.flush(MapTask.java:1482)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.close(MapTask.java:720)
+	at org.apache.hadoop.mapred.MapTask.closeQuietly(MapTask.java:2012)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:794)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:163)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1628)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:158)
+Caused by: java.lang.NoSuchMethodException: org.apache.hadoop.io.ArrayWritable.<init>()
+	at java.lang.Class.getConstructor0(Class.java:2902)
+	at java.lang.Class.getDeclaredConstructor(Class.java:2066)
+	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:125)
+	... 18 more
+2015-12-11 23:53:40,532 WARN [main] org.apache.hadoop.mapred.YarnChild: Exception running child : java.lang.RuntimeException: java.lang.NoSuchMethodException: org.apache.hadoop.io.ArrayWritable.<init>()
+	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:131)
+	at org.apache.hadoop.io.serializer.WritableSerialization$WritableDeserializer.deserialize(WritableSerialization.java:66)
+	at org.apache.hadoop.io.serializer.WritableSerialization$WritableDeserializer.deserialize(WritableSerialization.java:42)
+	at org.apache.hadoop.mapreduce.task.ReduceContextImpl.nextKeyValue(ReduceContextImpl.java:146)
+	at org.apache.hadoop.mapreduce.task.ReduceContextImpl.nextKey(ReduceContextImpl.java:121)
+	at org.apache.hadoop.mapreduce.lib.reduce.WrappedReducer$Context.nextKey(WrappedReducer.java:302)
+	at org.apache.hadoop.mapreduce.Reducer.run(Reducer.java:170)
+	at org.apache.hadoop.mapred.Task$NewCombinerRunner.combine(Task.java:1651)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.sortAndSpill(MapTask.java:1630)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.flush(MapTask.java:1482)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.close(MapTask.java:720)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:790)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:163)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1628)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:158)
+Caused by: java.lang.NoSuchMethodException: org.apache.hadoop.io.ArrayWritable.<init>()
+	at java.lang.Class.getConstructor0(Class.java:2902)
+	at java.lang.Class.getDeclaredConstructor(Class.java:2066)
+	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:125)
+	... 17 more
+
+2015-12-11 23:53:40,539 INFO [main] org.apache.hadoop.mapred.Task: Runnning cleanup for the task
+2015-12-11 23:53:40,579 WARN [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: Could not delete hdfs://localhost:9000/user/parallels/chessdata/output_a/_temporary/1/_temporary/attempt_1449846414359_0012_m_000002_1
+2015-12-11 23:53:40,594 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Stopping MapTask metrics system...
+2015-12-11 23:53:40,594 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system stopped.
+2015-12-11 23:53:40,594 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system shutdown complete.

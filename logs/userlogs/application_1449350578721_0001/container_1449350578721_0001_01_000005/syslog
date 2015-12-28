@@ -1,0 +1,10 @@
+2015-12-05 13:27:20,570 INFO [main] org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from hadoop-metrics2.properties
+2015-12-05 13:27:21,406 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2015-12-05 13:27:21,406 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system started
+2015-12-05 13:27:21,494 INFO [main] org.apache.hadoop.mapred.YarnChild: Executing with tokens:
+2015-12-05 13:27:21,494 INFO [main] org.apache.hadoop.mapred.YarnChild: Kind: mapreduce.job, Service: job_1449350578721_0001, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@368f2016)
+2015-12-05 13:27:22,397 INFO [main] org.apache.hadoop.mapred.YarnChild: Sleeping for 0ms before retrying again. Got null now.
+2015-12-05 13:27:26,142 INFO [main] org.apache.hadoop.mapred.YarnChild: mapreduce.cluster.local.dir for child: /tmp/hadoop-parallels/nm-local-dir/usercache/parallels/appcache/application_1449350578721_0001
+2015-12-05 13:27:29,610 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+2015-12-05 13:27:36,689 INFO [main] org.apache.hadoop.mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2015-12-05 13:27:40,779 INFO [main] org.apache.hadoop.mapred.MapTask: Processing split: hdfs://localhost:9000/user/parallels/input/yarn-env.sh:0+4567
